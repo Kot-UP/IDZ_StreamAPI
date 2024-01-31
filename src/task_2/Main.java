@@ -33,7 +33,7 @@ public class Main {
         System.out.println(stream_call);
 
         //Получение отсортированного по фамилиям список потенциально работоспособных людей с высшим образованием в выборке
-        List<String> stream_work = persons.stream()
+        List<Person> stream_work = persons.stream()
                 .filter(x -> x.getSex() == Sex.MAN ? x.getAge() <= 65 : x.getAge() <= 60)
                 .filter(x -> x.getAge() >= 18)
                 .filter(x -> x.getEducation() == Education.HIGHER)
